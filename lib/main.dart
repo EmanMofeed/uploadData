@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 class _AddApartmentScreenState extends State<AddApartmentScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  late String _type;
+  late String _type = 'rent';
   late String _city;
   late String _address1;
   late String _address2;
