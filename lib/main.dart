@@ -35,6 +35,7 @@ class _AddApartmentScreenState extends State<AddApartmentScreen> {
   late int _numVerandas;
   late int _numSalons;
   late int _numKitchens;
+   late int _OwnerID;
   late double _size;
   late double _price;
   late double _latitude;
@@ -330,6 +331,20 @@ class _AddApartmentScreenState extends State<AddApartmentScreen> {
                   },
                 ),
                 SizedBox(height: 16),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Owner ID'),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Please enter the Owner ID';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _OwnerID = value! as int;
+                  },
+                ),
+                                SizedBox(height: 16),
+
                 Text('Images'),
                 SizedBox(height: 8),
                 Row(
